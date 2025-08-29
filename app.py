@@ -35,7 +35,7 @@ def home():
 
 @app.route('/join')
 def join():
-    return render_template('join.html')
+    return render_template('join.html', player1name=PLAYER1NAME, player2name=PLAYER2NAME)
 
 @app.route('/start')
 def start():
