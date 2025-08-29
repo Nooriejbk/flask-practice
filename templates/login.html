@@ -1,0 +1,173 @@
+<html>
+    <head>
+    <link rel="stylesheet" href="styles.css">
+    <title>Home</title>
+    <style>
+      /*-----------------------ALL SCREENS-----------------------------*/
+      body{
+          margin: 0;
+          width: 100%;
+          height: 100%;
+          background-color: #ffd089;
+      }
+
+      /*-----------------------HOME SCREEN-----------------------------*/
+
+      #top{
+          height: 10%;
+          width: 100%;
+          display: block;
+      }
+      #login-butt{
+          float: right;
+          margin: 1%;
+          display: block;
+      }
+      #left{
+          height: 90%;
+          width: 50%;
+          float: left;
+          display: block;
+          /*background-color:#ffd089;*/
+      }
+      #right{
+          height: 90%;
+          width: 50%;
+          float: left;
+          display: block;
+          /*background-color:#ffd089;*/
+      }
+      #buttons{
+          margin-top: auto;
+          margin-bottom: auto;
+          height: 50%;
+      }
+
+      /* CSS https://getcssscan.com/css-buttons-examples*/
+      .button-74 {
+        background-color: #ff443a;
+        border: 2px solid #422800;
+        border-radius: 30px;
+        box-shadow: #422800 4px 4px 0 0;
+        color: #422800;
+        cursor: pointer;
+        display: inline-block;
+        font-weight: 600;
+        font-size: 18px;
+        padding: 0 18px;
+        line-height: 50px;
+        text-align: center;
+        text-decoration: none;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+      }
+
+      .button-74:hover {
+        background-color: #fff;
+      }
+
+      .button-74:active {
+        box-shadow: #422800 2px 2px 0 0;
+        transform: translate(2px, 2px);
+      }
+
+      @media (min-width: 768px) {
+        .button-74 {
+          min-width: 120px;
+          padding: 0 25px;
+        }
+      }
+
+      /*-----------------------LOGIN SCREEN-----------------------------*/
+
+      .login-box{
+        display: block;
+        float: left;
+        background-color: #ff443a;
+        color: #fff;
+        padding: 5%;
+        margin: 5%;
+      }
+
+      /*-----------------------JOIN/START SCREEN-----------------------------*/
+      .play{
+        display: block;
+        float: left;
+        padding: 1%;
+        margin: 5%;
+        margin-top: 2%;
+        width: 90%;
+        border-radius: 2%;
+        background-color: #fff;
+      }
+      #gamespace{
+        width: 80%;
+        float: left;
+        display: block;
+      }
+      #sidebar{
+        float: right;
+        background-color: #ffd089;
+        height: 70%;
+        border-radius: 2%;
+        width: 10%;
+      }
+      .player-box{
+        padding: 1%;
+        margin: 5%;
+        background-color: #fff;
+        text-align: center;
+      }
+      #sessioncode{
+        background-color: #ff443a;
+        display: inline-block;
+        padding: 2%;
+      }
+      #sessioncode input, #sessioncode h2{
+        float: left;
+        display: block;
+      }
+      .song-box{
+        background-color: #ff443a;
+        display: inline-block;
+        padding: 2%;
+        margin: 2%;
+      }
+      .song-prompt-box{
+        float: left;
+        display: block;
+        width: 30%;
+        background-color: #ffd089;
+        margin: 1%;
+        padding: 2%;
+      }
+      .song-prompt-box h2, .song-prompt-box h3{
+        margin: 0;
+      }
+    </style>
+    </head>
+  <body>
+      <div class="login-box">
+        <h2>Register</h2>
+        <form action="/">
+          <label for="username">Username:</label><br>
+          <input type="text" id="Uname" name="Uname" value="musiclover"><br>
+          <label for="password">Password:</label><br>
+          <input type="password" id="password" name="password" value="******"><br><br>
+          <input type="submit" value="Submit">
+        </form> 
+      </div>
+      <div class="login-box">
+        <h2>Login</h2>
+        <form action="/">
+          <label for="username">Username:</label><br>
+          <input type="text" id="Uname" name="Uname" value="musiclover"><br>
+          <label for="password">Password:</label><br>
+          <input type="password" id="password" name="password" value="******"><br><br>
+          <input type="submit" value="Submit">
+        </form> 
+      </div>
+  </body>
+</html>
+

@@ -1,67 +1,66 @@
-from flask import Flask
+from flask import Flask, render_template
 
 # Create Flask application instance
 app = Flask(__name__)
 
+PROMPTS = [
+    {
+        'id' : 1,
+        'prompt' : 'Your all-time favourite song'
+    },
+    {
+        'id' : 2,
+        'prompt' : 'Your guilty pleasure'
+    },
+    {
+        'id' : 3,
+        'prompt' : 'Makes you cry everytime'
+    },
+    {
+        'id' : 4,
+        'prompt' : 'Great song, not-so-great artist'
+    },
+    {
+        'id' : 5,
+        'prompt' : 'Reminds you of your ex'
+    },
+]
 # Basic route
 @app.route('/')
 def home():
-    return '''
-    <html>
-        <head>
-            <title>Flask Practice App</title>
-            <style>
-                body { 
-                    font-family: Arial, sans-serif; 
-                    max-width: 800px; 
-                    margin: 50px auto; 
-                    padding: 20px;
-                    text-align: center;
-                }
-                h1 { color: #333; }
-                p { color: #666; line-height: 1.6; }
-            </style>
-        </head>
-        <body>
-            <h1>Welcome to Flask Practice!</h1>
-            <p>This is a learning project based on the FreeCodeCamp Flask tutorial.</p>
-            <p>The Flask web application is now running successfully in the Replit environment!</p>
-        </body>
-    </html>
-    '''
+    return render_template('home.html')
 
-@app.route('/about')
-def about():
-    return '''
-    <html>
-        <head>
-            <title>About - Flask Practice App</title>
-            <style>
-                body { 
-                    font-family: Arial, sans-serif; 
-                    max-width: 800px; 
-                    margin: 50px auto; 
-                    padding: 20px;
-                }
-                h1 { color: #333; }
-                p { color: #666; line-height: 1.6; }
-                a { color: #007bff; text-decoration: none; }
-                a:hover { text-decoration: underline; }
-            </style>
-        </head>
-        <body>
-            <h1>About This Project</h1>
-            <p>This Flask practice application is designed to build foundational skills in Python web development.</p>
-            <p>Features:</p>
-            <ul>
-                <li>Route-based architecture using Flask decorators</li>
-                <li>Template rendering with dynamic content</li>
-                <li>Clean, educational code structure</li>
-            </ul>
-            <p><a href="/">← Back to Home</a></p>
-        </body>
-    </html>
-    '''
+@app.route('/join')
+def join():
+    return render_template('join.html')
+
+@app.route('/start')
+def start():
+    return render_template('start.html')
+
+@app.route('/login')
+def login():
+    return render_template('login.html')
+
+@app.route('/prompt')
+def prompt():
+    return render_template('prompt.html', prompts=PROMPTS)
+
+@app.route('/selection')
+def selection():
+    return render_template('selection.html')
+
+@app.route('/sessend')
+def sessend():
+    return render_template('sessend.html')
+
+@app.route('/sharing')
+def sharing():
+    return render_template('sharing.html')
+
+@app.route('/waiting')
+def waiting():
+    return render_template('waiting.html')
 
 if __name__ == '__main__':
     # Configure for Replit environment
