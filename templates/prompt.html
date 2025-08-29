@@ -154,11 +154,11 @@
     <div class="play">
       <div id="gamespace">
         <h2> Pick your first prompt</h2>
-        <form action="selection.html">
+        <form action="/selection">
           <label for="prompts">Select a prompt:</label>
           <select name="prompts" id="prompts">
-            {% for prompt in PROMPTS %}
-            <option value="{{ loop.index }}">{{prompt}}</option>
+            {% for prompt in prompts %}
+            <option value="{{ prompt['id'] }}">{{prompt['prompt']}}</option>
             {% endfor %}
           </select>
           <br><br>
