@@ -25,6 +25,9 @@ PROMPTS = [
         'prompt' : 'Reminds you of your ex'
     },
 ]
+
+PLAYER1NAME = 'ApplestoApples'
+PLAYER2NAME = 'BananasforMonkeys'
 # Basic route
 @app.route('/')
 def home():
@@ -36,7 +39,7 @@ def join():
 
 @app.route('/start')
 def start():
-    return render_template('start.html')
+    return render_template('start.html', player1name=PLAYER1NAME, player2name=PLAYER2NAME)
 
 @app.route('/login')
 def login():
@@ -44,19 +47,19 @@ def login():
 
 @app.route('/prompt')
 def prompt():
-    return render_template('prompt.html', prompts=PROMPTS)
+    return render_template('prompt.html', prompts=PROMPTS, player1name=PLAYER1NAME, player2name=PLAYER2NAME)
 
 @app.route('/selection')
 def selection():
-    return render_template('selection.html')
+    return render_template('selection.html', player1name=PLAYER1NAME, player2name=PLAYER2NAME)
 
 @app.route('/sessend')
 def sessend():
-    return render_template('sessend.html')
+    return render_template('sessend.html', player1name=PLAYER1NAME, player2name=PLAYER2NAME)
 
 @app.route('/sharing')
 def sharing():
-    return render_template('sharing.html')
+    return render_template('sharing.html', player1name=PLAYER1NAME, player2name=PLAYER2NAME)
 
 @app.route('/waiting')
 def waiting():
